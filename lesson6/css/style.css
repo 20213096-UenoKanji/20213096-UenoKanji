@@ -241,7 +241,30 @@ figure iframe {
   width: 100%;
 }
 /* トップ画像をスライド */
-
+.slide  {
+  white-space: nowrap;
+  overflow: hidden;
+}
+.slide img {
+  width: inherit;
+  height: inherit;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+@keyframes slide-4 {
+  0% { margin-left: 0;}
+  33% { margin-left: -100%;}
+  66% { margin-left: -200%;}
+  100% { margin-left: -300%;}
+}
+.slide > :first-child {
+  animation-name: slide-4;
+  animation-duration: 40s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
 /* トップに戻るボタンを右下に固定 */
 .pagetop {
   position: fixed;
